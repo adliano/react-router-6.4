@@ -1,15 +1,12 @@
 import './App.css'
 import { Home, Blog, About } from './pages'
-
 import {
   createBrowserRouter,
   createRoutesFromElements,
   Route,
   Link,
   Outlet,
-  RouterProvider,
-  BrowserRouter as Router,
-  Routes
+  RouterProvider
 } from 'react-router-dom'
 
 const Root = () => {
@@ -37,16 +34,8 @@ const router = createBrowserRouter(
 function App () {
   return (
     <div className='App'>
-      
       <header className='App-header'>
-        <Router>
-          <Routes>
-            <Route path='/' element={<Home />} />
-            <Route path='/blog' element={<Blog />} />
-            <Route path='about' element={<About />} />
-          </Routes>
-        </Router>
-        {/* <RouterProvider router={router} /> */}
+        <RouterProvider router={router} />
       </header>
     </div>
   )
